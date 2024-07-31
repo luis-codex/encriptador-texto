@@ -49,10 +49,9 @@ btnDecrypt.addEventListener('click', () => {
   results.textContent = decryptedText;
 });
 
-btnCopy.addEventListener(
-  'click',
+btnCopy.addEventListener('click', () => {
   navigator.clipboard
     .writeText(results.textContent)
     .then(() => alert('Texto copiado al portapapeles'))
-    .catch((err) => alert('Error al copiar texto: ' + err))
-);
+    .catch((err) => alert('Error al copiar texto: ' + err));
+});
